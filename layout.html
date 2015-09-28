@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<!--[if IE 8 ]><html dir="ltr" lang="en" class="ie8"><![endif]-->
+<!--[if IE 9 ]><html dir="ltr" lang="en" class="ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html dir="ltr" lang="en">
+<!--<![endif]-->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>midrogi.ch</title>
+  <base href="http://localhost/silence/" />
+  <meta name="description" content="MiDrogi Online Drogerie" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link href="http://localhost/silence/image/catalog/cart.png" rel="icon" />
+  <script src="catalog/view/javascript/jquery/jquery-2.1.1.min.js" type="text/javascript"></script>
+  <link href="catalog/view/javascript/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />
+  <script src="catalog/view/javascript/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+  <link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:400,400i,300,700" rel="stylesheet" type="text/css" />
+  <link href="catalog/view/theme/default/stylesheet/stylesheet.css" rel="stylesheet">
+  <link href="catalog/view/theme/default/stylesheet/hover-min.css" rel="stylesheet">
+  <link href="catalog/view/javascript/jquery/owl-carousel/owl.carousel.css" type="text/css" rel="stylesheet" media="screen" />
+  <script src="catalog/view/javascript/common.js" type="text/javascript"></script>
+  <script src="catalog/view/javascript/jquery/owl-carousel/owl.carousel.min.js" type="text/javascript"></script>
+</head>
+
+
+
+<body class="common-home">
+  <div id="top-navigation-container">
+    <header id="top-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4 col-xs-12">
+            <div id="logo" class="hidden-xs">
+              <a href="http://localhost/silence/index.php?route=common/home">
+                <img src="http://localhost/silence/image/catalog/logo/dm_logo_DE.png" title="midrogi.ch" alt="midrogi.ch" class="img-responsive" />
+              </a>
+            </div>
+          </div>
+          <div class="col-sm-8 col-xs-12">
+            <div class="row">
+              <div class="col-sm-12 head-nav-row">
+                <div class="nav pull-left">
+                  <form action="http://localhost/silence/index.php?route=common/language/language" method="post" enctype="multipart/form-data" id="language">
+                    <a href="de">de</a> | <a href="fr">fr</a> | <a href="it">it</a> | <a href="en">en</a>
+                    <input type="hidden" name="code" value="" />
+                    <input type="hidden" name="redirect" value="http://localhost/silence/index.php?route=common/home" />
+                  </form>
+                </div>
+                <div class="nav pull-right">
+                  <ul class="list-inline">
+                    <li><a href="http://localhost/silence/index.php?route=information/contact"><i class="fa fa-phone"></i> <span class="hidden-xs hidden-sm "> Können wir dir helfen?</span></a></li>
+                    <li><a href="http://localhost/silence/index.php?route=account/wishlist" id="wishlist-total" title="Wunschliste (0)"><i class="fa fa-heart"></i> <span class="hidden-xs hidden-sm ">Wunschliste (0)</span></a></li>
+                    <li><a href="http://localhost/silence/index.php?route=checkout/cart" title="Warenkorb"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm ">Warenkorb</span></a></li>
+                    <li><a href="http://localhost/silence/index.php?route=checkout/checkout" title="Kasse"><i class="fa fa-share"></i> <span class="hidden-xs hidden-sm ">Kasse</span></a></li>
+                    <li class="dropdown"><a href="http://localhost/silence/index.php?route=account/account" title="Mein Konto" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <span class="hidden-xs hidden-sm ">Anmelden</span> <span class="caret"></span></a>
+                      <ul class="dropdown-menu dropdown-menu-right">
+                        <li><a href="http://localhost/silence/index.php?route=account/register">Registrierung</a></li>
+                        <li><a href="http://localhost/silence/index.php?route=account/login">Anmelden</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="row head-nav-row hidden-xs">
+              <div class="col-sm-8 col-xs-12"><div id="search" class="input-group">
+                <input type="text" name="search" value="" placeholder="Suche" class="form-control input-lg" />
+                <span class="input-group-btn">
+                  <button type="button" class="btn btn-default btn-lg"><i class="fa fa-search"></i></button>
+                </span>
+              </div>      </div>
+              <div class="col-sm-4 col-xs-12"><div id="cart" class="btn-group btn-block">
+                <button type="button" data-toggle="dropdown" data-loading-text="Loading..." class="btn btn-inverse btn-block btn-lg dropdown-toggle"><i class="fa fa-shopping-cart"></i> <span id="cart-total">0 Artikel</span></button>
+                <ul class="dropdown-menu pull-right">
+                  <li>
+                    <p class="text-center">Warenkorb ist noch leer.</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+
+
+  <!-- Top Part -->
+  <div class="container-fullwidth">
+    <nav id="top-menu" class="navbar">
+      <div class="container">
+
+        <div class="navbar-header">
+          <a class="navbar-brand visible-xs" href="#">
+            <img alt="Brand" src="image/catalog/logo/mydrogi_small_de.png" />
+          </a>
+
+          <span id="category" class="visible-xs">Sortiment</span>
+          <button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><i class="fa fa-bars"></i></button>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav nav-justified">
+            <li class="" ><a href="#" class="">SCHÖNHEIT</a></li>
+            <li><a href="#" class="hvr-underline-reveal">PFLEGE</a></li>
+            <li><a href="#" class="hvr-underline-reveal">DUFT</a></li>
+            <li><a href="#" class="hvr-underline-reveal">GESUNDHEIT</a></li>
+            <li><a href="#" class="">ERNÄHRUNG</a></li>
+
+
+            <li><a href="#" class="">BABY</a></li>
+            <li><a href="#" class="">TIER</a></li>
+            <li><a href="#" class="">HAUSHALT</a></li>
+          </ul> 
+        </div><!-- /.navbar-collapse -->
+      </div>
+    </nav>
+  </div><!-- /.container-fluid -->
+</div>
